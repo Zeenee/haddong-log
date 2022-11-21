@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+
+html {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.6rem;
+  background-color: #f1f1f1;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 3rem 15rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: hotpink;
+}
+
+.menu ul {
+  display: flex;
+  gap: 20px;
+  font-size: 2rem;
+  color: hotpink;
+}
+
+main {
+  padding: 0 15rem;
+  margin: 0 auto;
+}
+
+.banner {
+  display: flex;
+  margin: 50px 0 20px;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #fff;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.banner .bg-img {
+  width: 80%;
+  height: 350px;
+  background: url(../assets/img_3.jpeg) no-repeat center / cover;
+}
+
+.banner .cont-title {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.banner h2 {
+  font-size: 3.5rem;
+  color: hotpink;
+}
+
+.banner span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.banner a {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: hotpink;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, auto));
+  gap: 4rem;
+  padding: 30px 0;
+  margin-bottom: 100px;
+}
+
+.post-item {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 30rem;
+}
+
+.post-item:hover .cont-txt {
+  height: 100%;
+}
+
+.post-item img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.post-item .cont-txt {
+  position: absolute;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+.post-item strong {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.post-item p {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .header {
+    padding: 3rem 5rem;
+  }
+
+  main {
+    padding: 0 5rem;
+  }
+
+  .banner .bg-img {
+    width: 60%;
+  }
+
+  .banner .cont-title {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* .banner .bg-img {
+    display: none;
+  }
+
+  .banner .cont-title {
+    width: 100%;
+  } */
+
+  .banner {
+    position: relative;
+  }
+
+  .banner .bg-img {
+    /* display: none; */
+    width: 100%;
+  }
+
+  .banner .cont-title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+    text-shadow: 0 0 10px rgb(255, 255, 255, 0.5);
+    font-weight: 900;
+  }
+
+  .posts {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+  }
+}
